@@ -71,12 +71,15 @@
                   messageStyle: "none",
                   displayAlign: "left",
                   "SVG": {
-                      linebreaks: {
-                          automatic: false,
-                          width: "container"
-                      },
-                      scale: scale,
-                      EqnChunk: 500
+                    blacker: 0,
+                    linebreaks: {
+                        automatic: true,
+                        width: "container"
+                    },
+                    scale: 90,
+                    useFontCache: true,
+                    useGlobalCache: true,
+                    matchFontHeight: true,
                   }
               });
             })()
