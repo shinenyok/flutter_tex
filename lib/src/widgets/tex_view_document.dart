@@ -25,7 +25,11 @@ class TeXViewDocument extends TeXViewWidget {
   @override
   Map toJson() => {
         'meta': meta().toJson(),
-        'data': this.data,
+        'data': this
+            .data
+            .replaceAll('+', ' + ')
+            .replaceAll('=', ' = ')
+            .replaceAll('-', ' - '),
         'style': this.style?.initStyle() ?? teXViewDefaultStyle,
       };
 }
