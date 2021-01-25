@@ -57,7 +57,7 @@
                   });
               });
               MathJax.Hub.Config({
-                  jax: ["input/TeX", "output/SVG"],
+                  jax: ["input/TeX", "output/HTML-CSS"],
                   extensions: ["tex2jax.js"],
                   TeX: {
                       extensions: ["AMSmath.js", "AMSsymbols.js", "noErrors.js", "noUndefined.js"]
@@ -70,6 +70,12 @@
                   showProcessingMessages: false, // 去掉加载信息
                   messageStyle: "none",
                   displayAlign: "left",
+                  "HTML-CSS": {
+                    linebreaks: {
+                      automatic: true,
+                      width: "container"
+                    }
+                   },
                   "SVG": {
                     blacker: 0,
                     linebreaks: {
